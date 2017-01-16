@@ -1,0 +1,12 @@
+{
+    "name": "vijaya_sankar/pam",
+    "authors": [
+        {
+            "name": "Vijaya Sankar N",
+            "email": "sankar.animation@gmail.com"
+        }
+    ],
+    "require": {
+        "catfan/Medoo": "^1.1"
+    }
+}
