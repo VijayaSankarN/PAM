@@ -2,10 +2,13 @@
 
 namespace LESP;
 
+// Initializing configurations 
 require_once 'config/config.php';
 
+// Getting URL slug
 $url = isset($_GET['url']) ? $_GET['url'] : "";
 
+// Autoloader for classes
 spl_autoload_register(function ($class_name) {
     $file = ROOT.'/config/lib/'.basename($class_name).'.php';
 
@@ -14,18 +17,12 @@ spl_autoload_register(function ($class_name) {
     }
 });
 
-new Configuration();
+// Build configuration based on environment
+$config = new Configuration();
 
+// Set up Database Connection
 $db = DatabaseFactory::getFactory()->getConnection();
 Registry::set('db', $db);
 
-
-
-// $app = new App();
-
-// echo "<pre>";
-
-
-
-// print_r(App::$database);
-// print_r(App::$assets);
+// Start Application
+$app = new Application();

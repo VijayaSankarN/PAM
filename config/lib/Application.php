@@ -2,13 +2,10 @@
 
 namespace LESP;
 
-/**
-* 
-*/
-class App extends Config
+class Application
 {
     public function __construct()
     {
-        $conf = new config();   
+    echo 134;
     }
 }
